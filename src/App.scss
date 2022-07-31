@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus{
+  border: 5px solid red;
+}
+body{
+  font-family: sans-serif;
+  background-color: #fff;
+  // height: 100%;
+}
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header, .footer{
+  width: 100%;
+  height: 71px;
+  background-color: #202123;
+  color:#fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 71px;
+}
+.mainpage{
+  flex:1 1 auto;
+  display: flex;
+  width: 1360px;
+  margin: 24px auto 0;
+  // overflow-x: scroll;
+}
+
+.categories{
+  width: 20%;
+  ul {
+    list-style: none;
+    li{
+      width: 100%;
+      background-color: #fff;
+      padding: 6px 12px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      font-size: 19px;
+      font-weight: 500;
+      cursor: pointer;
+      .favorite-star{
+        height:19px;
+        width:19px;
+        margin: 0 10px -3px 0;
+        * {
+            fill: #FCCA18
+          }
+      }
+    }
+  }
+  .active-categorie{
+    background-color: #5eb507;
+    color:#fff
+  }
+}
+.channels{ 
+  width: 80%;
+}
+.channelList{
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-row-gap: 22px;
+  row-gap: 22px;
+  grid-column-gap: 28px;
+  column-gap: 28px;
+  padding: 0 27px 50px;
+  li{
+    background-color: #fff;
+    // height: 100px;
+    box-shadow: -1px 2px 5px 0px rgba(34, 60, 80, 0.2),1px -1px 5px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 7px;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  } 
+  .channelList__logo{
+    img{
+      height: 36px;
+      width: 36px;
+    }
+  }
+  .channelList__name{
+    margin-left: 15px;
+    h3{
+      // font-size: 8px;
+    }
+  }
+  .channelList__favorite{
+    margin-left: auto;
+  }
+  .channelList__star{
+    height: 25px;
+    width: 25px;
+    margin: 0 10px;
+    
+      
+  }
+  .liked {
+    .channelList__star {
+      * {
+          fill: #FCCA18
+        }
+    }
+  }
+  
+}
+
+.showMore{
+  border: 1px solid #dbe0e4;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 50px;
+  font-size: 15px;
+  &:hover{
+    color:#5eb507;
+  }
+}
